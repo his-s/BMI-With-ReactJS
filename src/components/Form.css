@@ -26,10 +26,22 @@ input {
 }
 
 .form {
-    width: 400px;
-    height: 400px;
-    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     padding: 20px;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data p {
+    display: block;
+    margin: 20px;
 }
 
 .button {
