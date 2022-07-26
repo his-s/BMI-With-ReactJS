@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import "./components/Form.css"
+import "./App.css"
+import { useState } from "react"
+const Form = () => {
+  const [height, setHeight] = useState(0)
+  const [weight, setWeight] = useState(0)
+  const [bmiValue, setBMIValue] = useState(0)
+  const bmi = () => {
+    setBMIValue(weight / (height * height))
+  }
+  const onSubmit = () => {
 
-function App() {
+    bmi()
+  }
+  return (
+    <div className="form">
+      <form>
+        <div className="weight">
+          <label for="weight" >Weight (Kg) </label>
+          <input id="weight" type="text" onInput={(e) => setWeight(e.target.value)}></input>
+        </div>
+        <div className="height">
+          <label for="height">Height (Me) </label>
+          <input id="height" type="text" onInput={(e) => setHeight(e.target.value)}></input>
+        </div>
+        <div className="button">
+          <button onClick={onSubmit}>
+            Calculate
+          </button>
+          <button type="reset">
+            Reset
+          </button>
+        </div>
+      </form >
+      <div>
+        <p> your height is {height}</p>
+        <p>your weight is {weight}</p>
+        <p>your bmi is {bmiValue}</p>
+      </div>
+
+    </div >
+
+  )
+}
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form></Form>
     </div>
+
   );
 }
 
