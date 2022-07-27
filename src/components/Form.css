@@ -7,29 +7,19 @@
     margin: 20px 20px 20px 0;
 }
 
-label {
-    font-size: 18px;
-    font-weight: 500;
-}
 
-.weight label {
-    margin: 10px;
-}
 
 input {
     padding: 10px;
 
 }
 
-.height label {
-    margin: 10px;
-}
+
 
 .form {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 20px;
 }
 
@@ -42,16 +32,17 @@ input {
 .data p {
     display: block;
     margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: indianred;
+
+
 }
 
-.button {
-    margin: auto 50px;
-    display: inline-block;
-
-}
 
 form button {
-    margin: 10px;
+    margin-right: 20px;
     width: 80px;
     height: 25px;
     background-color: blueviolet;
